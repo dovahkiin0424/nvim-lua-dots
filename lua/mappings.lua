@@ -1,26 +1,68 @@
-vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', { noremap = true, silent = true })
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+map('n', '<Space>', '<NOP>', opts)
 
 vim.g.mapleader = ' '
 
-vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', { noremap = true, silent = true })
+map('n', '<Leader>h', ':set hlsearch!<CR>', opts)
 
-vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-
-vim.api.nvim_set_keymap('n', '<M-1>', ':tabprevious<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-2>', ':tabnext<CR>', { noremap = true, silent = true })
+map('n', '<Leader>e', ':NvimTreeToggle<CR>', opts)
 
 --Better resizing
-vim.api.nvim_set_keymap('n', '<M-j>', ':resize -2<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-k>', ':resize +2<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-h>', ':vertical resize -2<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-l>', ':vertical resize +2<CR>', { noremap = true, silent = true })
+map('n', '<M-j>', ':resize -2<CR>', opts)
+map('n', '<M-k>', ':resize +2<CR>', opts)
+map('n', '<M-h>', ':vertical resize -2<CR>', opts)
+map('n', '<M-l>', ':vertical resize +2<CR>', opts)
 
 --Better esc
-vim.api.nvim_set_keymap('i', 'jk', '<esc>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', 'kj', '<esc>', { noremap = true, silent = true })
+map('i', 'jk', '<esc>', opts)
+map('i', 'kj', '<esc>', opts)
 
 --Better split navigation
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
+map('n', '<C-j>', '<C-w>j', opts)
+map('n', '<C-k>', '<C-w>k', opts)
+map('n', '<C-h>', '<C-w>h', opts)
+map('n', '<C-l>', '<C-w>l', opts)
+
+-- Move to previous/next
+map('n', '<A-y>', ':BufferPrevious<CR>', opts)
+map('n', '<A-x>', ':BufferNext<CR>', opts)
+
+-- Re-order to previous/next
+map('n', '<A-<>', ':BufferMovePrevious<CR>', opts)
+map('n', '<A->>', ' :BufferMoveNext<CR>', opts)
+
+-- Goto buffer in position...
+map('n', '<A-1>', ':BufferGoto 1<CR>', opts)
+map('n', '<A-2>', ':BufferGoto 2<CR>', opts)
+map('n', '<A-3>', ':BufferGoto 3<CR>', opts)
+map('n', '<A-4>', ':BufferGoto 4<CR>', opts)
+map('n', '<A-5>', ':BufferGoto 5<CR>', opts)
+map('n', '<A-6>', ':BufferGoto 6<CR>', opts)
+map('n', '<A-7>', ':BufferGoto 7<CR>', opts)
+map('n', '<A-8>', ':BufferGoto 8<CR>', opts)
+map('n', '<A-9>', ':BufferGoto 9<CR>', opts)
+map('n', '<A-0>', ':BufferLast<CR>', opts)
+
+-- Close buffer
+map('n', '<A-c>', ':BufferClose<CR>', opts)
+
+-- Wipeout buffer
+--                 :BufferWipeout<CR>
+-- Close commands
+--                 :BufferCloseAllButCurrent<CR>
+--                 :BufferCloseBuffersLeft<CR>
+--                 :BufferCloseBuffersRight<CR>
+-- Magic buffer-picking mode
+map('n', '<C-p>', ':BufferPick<CR>', opts)
+
+-- Sort automatically by...
+map('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
+map('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
+map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
+
+-- Other:
+-- :BarbarEnable - enables barbar (enabled by default)
+-- :BarbarDisable - very bad command, should never be used
+
