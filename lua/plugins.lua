@@ -49,5 +49,7 @@ return require('packer').startup(function()
     }
   }
   use "nvim-lua/popup.nvim"
+  use {"ellisonleao/glow.nvim"}
+  use 'norcalli/nvim-colorizer.lua'
 
 end)
