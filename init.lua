@@ -10,6 +10,7 @@ require "terminal"
 require "ts"
 require "nvim-colorizer"
 require "tree"
+require "saga"
 
 vim.g.onedark_style = 'warmer'
 require('onedark').setup()

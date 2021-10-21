@@ -20,6 +20,7 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
   use 'kabouzeid/nvim-lspinstall'
+  use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
   use 'nvim-treesitter/nvim-treesitter'
   use 'navarasu/onedark.nvim'

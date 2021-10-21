@@ -58,11 +58,35 @@ map('n', '<A-c>', ':BufferClose<CR>', opts)
 map('n', '<C-p>', ':BufferPick<CR>', opts)
 
 -- Sort automatically by...
-map('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
-map('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
-map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
+map('n', '<Leader>bb', ':BufferOrderByBufferNumber<CR>', opts)
+map('n', '<Leader>bd', ':BufferOrderByDirectory<CR>', opts)
+map('n', '<Leader>bl', ':BufferOrderByLanguage<CR>', opts)
 
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
+
+-- LSPSAGA
+-- Lsp Finder
+map('n', 'gh', ':Lspsaga lsp_finder<CR>', opts)
+
+-- Code Action
+map('n', '<Leader>ca', ':Lspsaga code_action<CR>', opts)
+map('v', '<Leader>ca', ':<C-U>Lspsaga range_code_action<CR>', opts)
+
+-- Hover Doc
+map('n', 'K', ':Lspsaga hover_doc<CR>', opts)
+
+-- Signature Help
+map('n', 'gs', ':Lspsaga signature_help<CR>', opts)
+
+-- Rename
+map('n', 'gr', ':Lspsaga rename<CR>', opts)
+
+-- Preview Definition
+map('n', 'gd', ':Lspsaga preview_definition<CR>', opts)
+
+-- Preview Definition
+map('n', 'gl', ':Lspsaga show_line_diagnostic<CR>', opts)
+
 
