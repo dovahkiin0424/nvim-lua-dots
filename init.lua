@@ -12,5 +12,6 @@ require "nvim-colorizer"
 require "tree"
 require "saga"
 
-vim.g.onedark_style = 'warmer'
+vim.g.onedark_style = 'deep'
 require('onedark').setup()
+

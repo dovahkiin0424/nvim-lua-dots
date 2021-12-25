@@ -13,15 +13,22 @@ return require('packer').startup(function()
     requires = 'kyazdani42/nvim-web-devicons',
     config = function() require'nvim-tree'.setup {} end
 }
+  use 'nvim-lua/plenary.nvim'
+
+  --LSP stuff
   use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
+  use 'glepnir/lspsaga.nvim'
+  use 'onsails/lspkind-nvim'
+
+  --cmp stuff
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
-  use 'kabouzeid/nvim-lspinstall'
-  use 'glepnir/lspsaga.nvim'
-  use 'onsails/lspkind-nvim'
+  use 'hrsh7th/cmp-nvim-lua'
+
   use 'nvim-treesitter/nvim-treesitter'
   use 'navarasu/onedark.nvim'
   use {

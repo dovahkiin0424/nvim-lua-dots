@@ -12,11 +12,9 @@ cmp.setup {
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = cmp.mapping.complete(),
     ["<CR>"] = cmp.mapping.confirm { select = true },
-    -- Right is for ghost_text to behave like terminal
-    ["<Right>"] = cmp.mapping.confirm { select = true },
-    -- Don't insert if I explicitly exit
     -- Start completion with C-Space to have it truly clean-up
     ["<C-e>"] = cmp.mapping.abort(),
+
     -- Insert instead of Select so you don't go away at `stopinsert` after `CursorHoldI`
     -- @TODOUA: I want to be able to `Select` without `stopinsert` killing it (& keep `stopinsert`)
     ["<Down>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
@@ -31,12 +29,13 @@ cmp.setup {
   sources = {
     -- 'crates' is lazy loaded
     { name = "nvim_lsp" },
+    { name = "nvim_lua" },
     { name = "treesitter" },
     { name = "vsnip" },
     { name = "path" },
     {
       name = "buffer",
-      opts = {
+      option = {
         get_bufnrs = function()
           return vim.api.nvim_list_bufs()
         end,
@@ -45,17 +44,18 @@ cmp.setup {
     { name = "spell" },
   },
   formatting = {
+	fields =  { "abbr", "menu", "kind"},
     format = function(entry, vim_item)
-      vim_item.kind = string.format("%s %s", lspkind.presets.default[vim_item.kind], vim_item.kind)
+      vim_item.kind = string.format("%s", lspkind.presets.default[vim_item.kind], vim_item.kind)
       vim_item.menu = ({
-        nvim_lsp = "ﲳ",
-        nvim_lua = "",
+        nvim_lsp = "LSP",
+        nvim_lua = "LUA",
         treesitter = "",
         path = "ﱮ",
-        buffer = "﬘",
+        buffer = "BUFF",
         zsh = "",
-        vsnip = "",
-        spell = "暈",
+        vsnip = "VSNIP",
+        spell = "SPELL",
       })[entry.source.name]
 
       return vim_item
