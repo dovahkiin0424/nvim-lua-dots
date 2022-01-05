@@ -11,6 +11,7 @@ require "ts"
 require "nvim-colorizer"
 require "tree"
 require "saga"
+require "autopairs"
 
 vim.g.onedark_style = 'deep'
 require('onedark').setup()

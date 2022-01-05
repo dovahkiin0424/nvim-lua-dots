@@ -14,6 +14,7 @@ return require('packer').startup(function()
     config = function() require'nvim-tree'.setup {} end
 }
   use 'nvim-lua/plenary.nvim'
+  use 'windwp/nvim-autopairs'
 
   --LSP stuff
   use 'neovim/nvim-lspconfig'
