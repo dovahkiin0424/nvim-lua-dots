@@ -89,4 +89,5 @@ map('n', 'gd', ':Lspsaga preview_definition<CR>', opts)
 -- Preview Definition
 map('n', 'gl', ':Lspsaga show_line_diagnostic<CR>', opts)
 
-
+-- null-ls formatting
+map('n', '<Leader>f', ':Format<CR>', opts)

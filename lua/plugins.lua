@@ -21,6 +21,7 @@ return require('packer').startup(function()
   use 'williamboman/nvim-lsp-installer'
   use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
 
   --cmp stuff
   use 'hrsh7th/nvim-cmp'
