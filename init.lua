@@ -13,6 +13,9 @@ require "tree"
 require "saga"
 require "autopairs"
 
-vim.g.onedark_style = 'deep'
-require('onedark').setup()
+require('onedark').setup {
+	style = "deep"
+}
+
+require('onedark').load()
 
