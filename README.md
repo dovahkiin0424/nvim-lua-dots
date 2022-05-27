@@ -13,6 +13,7 @@ Just clone the repo and copy the files to your `~/config/nvim/` folder.
 When you first open vim with the config, it will print a tons of errors, but **don't panic!**
 
 It happens, cuz you need to install the called plugins, so on the error page, just hit `enter`, and in normal mode type `:PackerSync` (you can `tab` it).
+
 Exit vim and you will ready to go, when you open it again.
 
 ## Initial config
@@ -20,9 +21,11 @@ Exit vim and you will ready to go, when you open it again.
 I'm using TreeSitter and LSP
 
 For proper syntax highlighting: `:TSInstall <your desired language>` e.g.: `:TSInstall go`
+
 You can view all the supported stuff with: `:TSInstallInfo`
 
 For autocompletion, snippets and the other fancy stuff: `:LspInstall <your desired language or linter name>` e.g.: `:LspInstall go` or `:LspInstall gopls`
+
 For the list of supported stuff press `tab` after typing `:LspInstall` (works with treesitter too)
 
 You are ready to go!
