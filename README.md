@@ -22,7 +22,7 @@ I'm using TreeSitter and LSP
 For proper syntax highlighting: `:TSInstall <your desired language>` e.g.: `:TSInstall go`
 You can view all the supported stuff with: `:TSInstallInfo`
 
-For autocompletion, snippets and the other fancy stuff: `LspInstall <your desired language or linter name>` e.g.: `LspInstall go` or `LspInstall gopls`
+For autocompletion, snippets and the other fancy stuff: `:LspInstall <your desired language or linter name>` e.g.: `:LspInstall go` or `:LspInstall gopls`
 For the list of supported stuff press `tab` after typing `:LspInstall` (works with treesitter too)
 
 You are ready to go!
