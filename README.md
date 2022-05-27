@@ -4,7 +4,7 @@ This is my comfy nvim IDE config written in lua. For now it uses dracula theme w
 
 This is how it looks with my colorscheme with i3 and alacritty:
 
-[screenshot](https://github.com/dovahkiin0424/nvim-lua-dots/blob/main/screenshot.png?raw=true)
+![screenshot](https://github.com/dovahkiin0424/nvim-lua-dots/blob/main/screenshot.png?raw=true)
 
 ## Installation
 
