@@ -32,7 +32,6 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lua'
 
   use 'nvim-treesitter/nvim-treesitter'
-  use 'navarasu/onedark.nvim'
   use {
   'hoob3rt/lualine.nvim',
   requires = {'kyazdani42/nvim-web-devicons', opt = true}
